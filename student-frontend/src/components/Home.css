@@ -1,0 +1,23 @@
+.home-container {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-container h1 {
+  color: #1e88e5;
+}
+
+.home-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.home-container button:hover {
+  background-color: #1565c0;
+}
