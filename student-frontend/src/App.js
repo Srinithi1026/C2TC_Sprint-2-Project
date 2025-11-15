@@ -1,16 +1,17 @@
 import React from "react";
-import StudentList from "./components/StudentList";
 import AddStudent from "./components/AddStudent";
-import { getStudents, addStudent, deleteStudent } from "./services/studentService";
+import StudentList from "./components/StudentList";
 
 function App() {
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <h1 style={{ textAlign: "center" }}>Student Management System</h1>
       <AddStudent />
+      <hr />
       <StudentList />
     </div>
   );
 }
 
 export default App;
+

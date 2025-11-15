@@ -18,7 +18,5 @@ export const addStudent = async (student) => {
 
 // DELETE student
 export const deleteStudent = async (id) => {
-  await fetch(`${API_URL}/${id}`, {
-    method: "DELETE",
-  });
+  await fetch(`${API_URL}/${id}`, { method: "DELETE" });
 };

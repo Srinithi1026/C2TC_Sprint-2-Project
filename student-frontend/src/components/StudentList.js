@@ -9,26 +9,27 @@ function StudentList() {
     setStudents(data);
   };
 
+  const handleDelete = async (id) => {
+    await deleteStudent(id);
+    alert("Student Deleted");
+    loadData();
+  };
+
   useEffect(() => {
     loadData();
   }, []);
 
-  const handleDelete = async (id) => {
-    await deleteStudent(id);
-    loadData(); // refresh
-  };
-
   return (
     <div>
       <h2>Student List</h2>
-      <ul>
-        {students.map((s) => (
-          <li key={s.id}>
-            {s.name} - {s.email}
+      {students.map((s) => (
+        <div key={s.id}>
+          <p>
+            <b>{s.name}</b> — {s.department} — {s.email}
             <button onClick={() => handleDelete(s.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+          </p>
+        </div>
+      ))}
     </div>
   );
 }
